@@ -56,7 +56,7 @@ export class HttpService {
     });
   }
 
-  public remove(url: string): Promise<IResultHttp> {
+  public delete(url: string): Promise<IResultHttp> {
     const header = this.createHeader();
     return new Promise(async (resolve) => {
       try {
