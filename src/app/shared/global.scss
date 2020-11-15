@@ -1,0 +1,15 @@
+.div-table {
+    width: calc(100% - 40px);
+}
+
+.div-table > * {
+    width: 100%;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.full-width {
+    width: 100% !important;
+}

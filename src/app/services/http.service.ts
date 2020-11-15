@@ -31,7 +31,7 @@ export class HttpService {
     return new Promise(async (resolve) => {
       try {
         this.spinner.show();
-        const res = await this.http.get(url, { headers: header });
+        const res = await this.http.get(url, { headers: header }).toPromise();
         resolve({ success: true, data: res, error: undefined });
         this.spinner.hide();
       } catch (error) {
@@ -46,12 +46,12 @@ export class HttpService {
     return new Promise(async (resolve) => {
       try {
         this.spinner.show();
-        const res = await this.http.post(url, model, { headers: header });
+        const res = await this.http.post(url, model, { headers: header }).toPromise();
         resolve({ success: true, data: res, error: undefined });
-        this.spinner.hide();        
+        this.spinner.hide();
       } catch (error) {
         this.spinner.hide();
-        resolve({ success: false, data: {}, error });   
+        resolve({ success: false, data: {}, error });
       }
     });
   }
@@ -61,12 +61,12 @@ export class HttpService {
     return new Promise(async (resolve) => {
       try {
         this.spinner.show();
-        const res = await this.http.delete(url, { headers: header });
+        const res = await this.http.delete(url, { headers: header }).toPromise();
         resolve({ success: true, data: res, error: undefined });
-        this.spinner.hide();        
+        this.spinner.hide();
       } catch (error) {
         this.spinner.hide();
-        resolve({ success: false, data: {}, error });   
+        resolve({ success: false, data: {}, error });
       }
     });
   }

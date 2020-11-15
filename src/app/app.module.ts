@@ -16,17 +16,28 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { CategoryComponent } from './pages/category/category.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PedidosPendentesComponent,
     CardDashboardComponent,
-    CategorysComponent
+    CategorysComponent,
+    CategoryComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -38,7 +49,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MatSidenavModule,
     MatListModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
