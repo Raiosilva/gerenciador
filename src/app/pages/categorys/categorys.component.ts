@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table/table-data-source';
+import { MatTableDataSource } from '@angular/material/table';
 
 import { ICategory } from '../../interfaces/ICategory';
 import { CategoryService } from '../../services/category.service';
@@ -18,11 +18,13 @@ export class CategorysComponent implements OnInit {
 
   async ngOnInit() {
     const categorys = await this.categoryService.getAll();
-    if (!categorys.data) {
-      this.dataSource = categorys.data.map((it: ICategory) => {
-        return { name: it.name, description: it.description };
-      });
+    if (categorys.data) {
+      this.dataSource = new MatTableDataSource(categorys.data);
     }
+  }
+
+  filter(value: string) {
+    this.dataSource.filter = value.trim().toLowerCase();
   }
 
 }
