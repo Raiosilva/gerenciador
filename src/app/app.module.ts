@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PedidosPendentesComponent } from './components/pedidos-pendentes/pedidos-pendentes.component';
 import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component';
 import { CategorysComponent } from './pages/categorys/categorys.component';
+import { getPaginatorIntl } from '../app/shared/paginator-intl';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,6 +19,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CategoryComponent } from './pages/category/category.component';
@@ -51,9 +53,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     MatCardModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [{
+    provide: MatPaginatorIntl, useValue: getPaginatorIntl()
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

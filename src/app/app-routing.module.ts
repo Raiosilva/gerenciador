@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AdminGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'categorys', component: CategorysComponent, canActivate: [AdminGuard] },
-  { path: 'category/:id', component: CategoryComponent, canActivate: [AdminGuard] },
+  { path: 'categorys/:id', component: CategoryComponent, canActivate: [AdminGuard] },
 ];
 
 @NgModule({
