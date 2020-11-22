@@ -27,6 +27,21 @@
     }
 }
 
+[col-50] {
+    width: calc(50% - 10px);
+    float: left;
+    margin-right: 10px;
+}
+
+.no-margin-right[col-50] {
+    width: 50% !important;
+    margin-right: 0px !important;
+} 
+
+.no-margin-right {
+    margin-right: 0px !important;
+}
+
 .container-toolbar {
     display: flex;
     flex-direction: row;

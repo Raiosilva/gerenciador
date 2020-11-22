@@ -20,12 +20,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSelectModule } from '@angular/material/select';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CategoryComponent } from './pages/category/category.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SubCategoryComponent } from './pages/sub-category/sub-category.component';
+import { SubCategorysComponent } from './pages/sub-categorys/sub-categorys.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CategorysComponent,
     CategoryComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SubCategoryComponent,
+    SubCategorysComponent
   ],
   imports: [
     FormsModule,
@@ -54,7 +59,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatInputModule,
     MatSnackBarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSelectModule
   ],
   providers: [{
     provide: MatPaginatorIntl, useValue: getPaginatorIntl()
