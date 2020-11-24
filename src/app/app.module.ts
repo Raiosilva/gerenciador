@@ -29,6 +29,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SubCategoryComponent } from './pages/sub-category/sub-category.component';
 import { SubCategorysComponent } from './pages/sub-categorys/sub-categorys.component';
+import { QuestionsComponent } from './pages/questions/questions.component';
+import { QuestionComponent } from './pages/question/question.component';
+import { QuestionTypePipe } from './pipes/question-type.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { SubCategorysComponent } from './pages/sub-categorys/sub-categorys.compo
     HomeComponent,
     LoginComponent,
     SubCategoryComponent,
-    SubCategorysComponent
+    SubCategorysComponent,
+    QuestionsComponent,
+    QuestionComponent,
+    QuestionTypePipe
   ],
   imports: [
     FormsModule,
