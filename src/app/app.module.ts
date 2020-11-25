@@ -32,6 +32,8 @@ import { SubCategorysComponent } from './pages/sub-categorys/sub-categorys.compo
 import { QuestionsComponent } from './pages/questions/questions.component';
 import { QuestionComponent } from './pages/question/question.component';
 import { QuestionTypePipe } from './pipes/question-type.pipe';
+import { CustomerComponent } from './pages/customer/customer.component';
+import { CustomersComponent } from './pages/customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { QuestionTypePipe } from './pipes/question-type.pipe';
     SubCategorysComponent,
     QuestionsComponent,
     QuestionComponent,
-    QuestionTypePipe
+    QuestionTypePipe,
+    CustomerComponent,
+    CustomersComponent
   ],
   imports: [
     FormsModule,
