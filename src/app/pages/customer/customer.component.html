@@ -1,1 +1,19 @@
-<p>customer works!</p>
+<div class="container">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="preencha o nome do cliente" required [(ngModel)]="model.name">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="preencha o e-mail do cliente" required [(ngModel)]="model.name" type="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Telefone</mat-label>
+        <input matInput placeholder="preencha o telefone do cliente" required [(ngModel)]="model.phone">
+    </mat-form-field>
+    <input type="file" [(ngModel)]="model.photo" />
+    <div class="toolbar__form">
+        <button mat-raised-button routerLink="/customers">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+    </div>
+</div>
