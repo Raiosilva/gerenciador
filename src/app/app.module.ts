@@ -34,6 +34,7 @@ import { QuestionComponent } from './pages/question/question.component';
 import { QuestionTypePipe } from './pipes/question-type.pipe';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { CustomersComponent } from './pages/customers/customers.component';
+import { InputFileComponent } from './components/input-file/input-file.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CustomersComponent } from './pages/customers/customers.component';
     QuestionComponent,
     QuestionTypePipe,
     CustomerComponent,
-    CustomersComponent
+    CustomersComponent,
+    InputFileComponent
   ],
   imports: [
     FormsModule,

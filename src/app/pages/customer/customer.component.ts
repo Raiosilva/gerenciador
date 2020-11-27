@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FileManager } from 'src/app/components/input-file/input-file.component';
 import { Customer } from 'src/app/models/Customer.dto';
 import { CustomerService } from 'src/app/services/customer.service';
 
@@ -36,6 +37,12 @@ export class CustomerComponent implements OnInit {
     if (result.success) {
       this.matSnack.open('Cliente salva com Sucesso', undefined, { duration: 3000 });
       this.router.navigateByUrl('/customers');
+    }
+  }
+
+  selectedFile(file: FileManager): void {
+    if (file.base64Data) {
+      this.model.photo = file.base64Data;
     }
   }
 
