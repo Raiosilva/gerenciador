@@ -3,14 +3,27 @@
         <mat-label>Nome</mat-label>
         <input matInput placeholder="preencha o nome do cliente" required [(ngModel)]="model.name">
     </mat-form-field>
-    <mat-form-field appearance="outline" class="full-width">
+
+    <mat-form-field appearance="outline" class="full-width" col-50>
         <mat-label>E-mail</mat-label>
-        <input matInput placeholder="preencha o e-mail do cliente" required [(ngModel)]="model.name" type="email">
+        <input matInput placeholder="preencha o e-mail do cliente" required [(ngModel)]="model.email" type="email">
     </mat-form-field>
-    <mat-form-field appearance="outline" class="full-width">
+
+    <mat-form-field appearance="outline" class="full-width no-margin-right" col-50>
         <mat-label>Telefone</mat-label>
         <input matInput placeholder="preencha o telefone do cliente" required [(ngModel)]="model.phone">
     </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width" col-50 *ngIf="!model.uid">
+        <mat-label>Senha</mat-label>
+        <input matInput placeholder="informe sua nova senha" required [(ngModel)]="model.password" type="password">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width no-margin-right" col-50 *ngIf="!model.uid">
+        <mat-label>Confirmação de Senha</mat-label>
+        <input matInput placeholder="digitenovamente a senha informada acima" required [(ngModel)]="model.confirmPassword" type="password">
+    </mat-form-field>
+
     <app-input-file [image]="model.photo" (select)="selectedFile($event)" >
 
     </app-input-file>

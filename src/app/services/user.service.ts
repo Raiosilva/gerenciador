@@ -35,4 +35,8 @@ export class UserService extends BaseService<any>  {
     return !!localStorage.getItem('platform: token');
   }
 
+  static get token(): string {
+    return localStorage.getItem('platform:token');
+  }
+
 }

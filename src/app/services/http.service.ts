@@ -18,12 +18,12 @@ export class HttpService {
 
     header = header.append('Content-Type', 'application/json');
     header = header.append('Accept', 'application/json');
-    
-    let token = '';
+
+    let token = localStorage.getItem('platform:token');
     if (token) {
-      header = header.append('x-access-token', token);
+      header = header.append('x-token-access', token);
     }
-    
+
     return header;
   }
 

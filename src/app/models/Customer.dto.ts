@@ -6,5 +6,5 @@ export class Customer extends Audit {
     photo: string;
     phone: string;
     password: string;
-    password_confirmation: string;
+    confirmPassword: string;
 }
