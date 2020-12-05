@@ -1,17 +1,20 @@
+.link {
+    cursor: pointer;
+}
+
 .div-table {
-    width: calc(100% - 40px);
+// width: calc(100% - 40px);
+    width: 100%;
+    float: left;
 }
 
 .div-table > * {
     width: 100%;
 }
 
-.link {
-    cursor: pointer;
-}
-
 .full-width {
-    width: 100% !important;
+    // width: 100% !important;
+    width: 100%;
 }
 
 .toolbar__form {
@@ -28,6 +31,21 @@
     }
 }
 
+[col-10] {
+    width: 10%;
+    float: left;
+}
+
+[col-25] {
+    width: 25%;
+    float: left;
+}
+
+[col-33] {
+    width: 33%;
+    float: left;
+}
+
 [col-50] {
     width: calc(50% - 10px);
     float: left;
@@ -37,7 +55,17 @@
 .no-margin-right[col-50] {
     width: 50% !important;
     margin-right: 0px !important;
-} 
+}
+
+[col-75] {
+    width: 75%;
+    float: left;
+}
+
+[col-100] {
+    width: 100%;
+    float: left;
+}
 
 .no-margin-right {
     margin-right: 0px !important;
@@ -74,6 +102,10 @@ td.actions {
     button:last-child {
         color: red;
     }
+}
+
+.confirm-button-dialog {
+    background: #673ab7 !important;
 }
 
 app-input-file {
