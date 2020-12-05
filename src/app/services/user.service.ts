@@ -4,11 +4,12 @@ import { environment } from 'src/environments/environment';
 import { BaseService } from '../base/base.service';
 import { IResultHttp } from '../interfaces/IResultHttp';
 import { HttpService } from './http.service';
+import { User } from '../models/User.dto';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService extends BaseService<any>  {
+export class UserService extends BaseService<User>  {
 
   private loginSubject = new Subject<boolean>();
 

@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CategoryComponent } from './pages/category/category.component';
@@ -37,6 +38,8 @@ import { CustomersComponent } from './pages/customers/customers.component';
 import { InputFileComponent } from './components/input-file/input-file.component';
 import { ServiceProviderComponent } from './pages/service-provider/service-provider.component';
 import { ServiceProvidersComponent } from './pages/service-providers/service-providers.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,9 @@ import { ServiceProvidersComponent } from './pages/service-providers/service-pro
     CustomersComponent,
     InputFileComponent,
     ServiceProviderComponent,
-    ServiceProvidersComponent
+    ServiceProvidersComponent,
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     FormsModule,
@@ -76,7 +81,8 @@ import { ServiceProvidersComponent } from './pages/service-providers/service-pro
     MatInputModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   providers: [{
     provide: MatPaginatorIntl, useValue: getPaginatorIntl()

@@ -13,6 +13,8 @@ import { CustomersComponent } from './pages/customers/customers.component';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { ServiceProvidersComponent } from './pages/service-providers/service-providers.component';
 import { ServiceProviderComponent } from './pages/service-provider/service-provider.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserComponent } from './pages/user/user.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -28,6 +30,8 @@ const routes: Routes = [
   { path: 'customers/:id', component: CustomerComponent, canActivate: [AdminGuard] },
   { path: 'serviceproviders', component: ServiceProvidersComponent, canActivate: [AdminGuard] },
   { path: 'serviceproviders/:id', component: ServiceProviderComponent, canActivate: [AdminGuard] },
+  { path: 'users', component: UsersComponent, canActivate: [AdminGuard] },
+  { path: 'users/:id', component: UserComponent, canActivate: [AdminGuard] },
 ];
 
 @NgModule({
