@@ -7,7 +7,7 @@ A ideia é "clonar" a plataformar Getnet em suas funcionalidades mais importante
 ## Após clonar o projeto 
 
 rode:
-1. `mpn i`, para bixar as dependências.
+1. `mpn i`, para baixar as dependências.
 2. `ng s`, digite no navegador `http://localhost:4200/`.
 
 
