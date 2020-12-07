@@ -11,3 +11,4 @@ rode:
 2. `ng s`, digite no navegador `http://localhost:4200/`.
 
 
+OBS.: Andamento
